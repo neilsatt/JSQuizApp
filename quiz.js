@@ -1,4 +1,4 @@
-// Quiz Prototype 
+ 
 
 // Constructor
 /* 
@@ -10,6 +10,8 @@ function Quiz(questions) {
     this.questions = questions;
     this.currentQuestionIndex = 0; // first in array
 }
+
+// Quiz Prototypes -------------------------------------------
 
 /* Check current question against correct answer */
 Quiz.prototype.guess = function(answer) {

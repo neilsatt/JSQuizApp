@@ -1,4 +1,8 @@
-// Create the Quiz Questions 
+/*
+ Create the Quiz Questions 
+ Create the Quiz Object
+ Create the UI
+*/
 
 var questions = [
     // question, choices array, and correct answer 

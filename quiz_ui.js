@@ -1,3 +1,4 @@
+// Object Literal
 var QuizUI = {
     
     /* Show score or create UI */

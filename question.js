@@ -1,5 +1,3 @@
-// Question Prototype 
-
 // Constructor 
 /* 
     Takes in text of the question, choices array, and correct answer 
@@ -9,6 +7,8 @@ function Question(text, choices, answer) {
     this.choices = choices; // correct and incorrect answer 
     this.answer = answer;
 }
+
+// Question Prototype ----------------------------------------
 
 // See if user's choice is the correct one 
 Question.prototype.isCorrectAnswer = function (choice) {
