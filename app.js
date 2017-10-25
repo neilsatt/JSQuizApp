@@ -1,6 +1,7 @@
 // Create the Quiz Questions 
 
 var questions = [
+    // question, choices array, and correct answer 
     new Question("Who wrote the music for \'Star Wars'\?", ["Alex North", 'Alan Silvestri', 'John Williams'], 'John Williams'),
     new Question("Who wrote the music for \'American Beauty'\?", ['Thomas Newman', "Alex North", 'John Barry'], 'Thomas Newman'), 
     new Question("Who wrote the music for \'The Cider House Rules'\?", [ "Alex North", 'Leonard Bernstein', 'Rachel Portman'], 'Rachel Portman'), 
