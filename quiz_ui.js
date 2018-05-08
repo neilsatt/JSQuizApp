@@ -1,7 +1,7 @@
 // Object Literal
 var QuizUI = {
     
-    /* Show score or create UI */
+    /* Show final score or create UI */
     displayNext: function () {
         if (quiz.hasEnded()) {
             this.displayScore();
@@ -21,13 +21,14 @@ var QuizUI = {
     /* 
        Add choices/possible answers from the choices array  
        Using their IDs to add them to the page, using the loop
+       Prints out the number of choices for each main question
     */
     displayChoices: function() {
         var choices = quiz.getCurrentQuestion().choices;
 
         for(var i = 0; i < choices.length; i++) {
             this.populateIdWithHTML("choice" + i, choices[i]); // choice ID
-            this.guessHandler("guess" + i, choices[i]); // click handler and guess ID
+            this.guessHandler("guess" + i, choices[i]); // add click handler and guess ID
         }
     },
     
@@ -35,7 +36,7 @@ var QuizUI = {
     displayScore: function() {
         var gameOverHTML = "<h1>Game Over</h1>";
         gameOverHTML += "<h2> Your score is: " + quiz.score + " out of "+ quiz.questions.length +"</h2>";
-        this.populateIdWithHTML("quiz", gameOverHTML);
+        this.populateIdWithHTML("quiz", gameOverHTML); // add html to quiz ID
     },
     
     /* Find element by ID and add html into it  */
@@ -52,7 +53,7 @@ var QuizUI = {
     guessHandler: function(id, guess) {
         var button = document.getElementById(id);
         button.onclick = function() {
-            quiz.guess(guess);
+            quiz.guess(guess); // check if answer is correct 
             QuizUI.displayNext(); // Game over or next question
         }
     },
@@ -60,6 +61,7 @@ var QuizUI = {
     /* Displays which question out of total num of questions */
     displayProgress: function() {
         var currentQuestionNumber = quiz.currentQuestionIndex + 1;
+        // add html to progress ID 
         this.populateIdWithHTML("progress", "Question " + currentQuestionNumber + " of " + quiz.questions.length);
     }
     

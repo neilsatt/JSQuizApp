@@ -1,7 +1,5 @@
 /*
- Create the Quiz Questions 
- Create the Quiz Object
- Create the UI
+ Create the Quiz Questions in an Array 
 */
 
 var questions = [
@@ -19,7 +17,7 @@ var questions = [
     
 ];
 
-// Create the Quiz 
+//  Create the Quiz Object and pass in the questions 
 var quiz = new Quiz(questions);
 
 // Render/Display the Quiz questions 

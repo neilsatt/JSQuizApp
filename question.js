@@ -4,7 +4,7 @@
 */
 function Question(text, choices, answer) {
     this.text = text;
-    this.choices = choices; // correct and incorrect answer 
+    this.choices = choices; // array of correct and incorrect answers 
     this.answer = answer;
 }
 
